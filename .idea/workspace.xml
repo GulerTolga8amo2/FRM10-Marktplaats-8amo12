@@ -145,11 +145,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608577825532</updated>
-      <workItem from="1608577827157" duration="3035000" />
+      <workItem from="1608577827157" duration="8775000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608586417217">
+      <screen x="0" y="0" width="1440" height="848" />
+    </state>
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1440.0.1680.1050/0.0.1440.848@0.0.1440.848" timestamp="1608586417217" />
+    <state x="522" y="380" key="NewPhpFileDialog" timestamp="1608581316899">
+      <screen x="0" y="0" width="1440" height="848" />
+    </state>
+    <state x="522" y="380" key="NewPhpFileDialog/1440.0.1680.1050/0.0.1440.848@0.0.1440.848" timestamp="1608581316899" />
   </component>
 </project>

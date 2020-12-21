@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->integer('user_id');
             $table->string('title');
             $table->string('description');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->integer('price');
             $table->integer('deleted')->default(0);
             $table->timestamps();

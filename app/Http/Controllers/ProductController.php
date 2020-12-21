@@ -23,23 +23,37 @@ class ProductController extends Controller {
         return  view('/home', ['products' => Product::all()->where('user_id', auth::id())->sortByDesc('updated_at')]);
     }
 
+    public function show() {
+        $product = Product::firstWhere('id', request('id'));
+        return view('/product', ['product' => $product]);
+    }
+
+    public function edit() {
+        $product = Product::firstWhere('id', request('id'));
+        return view('/editProduct', ['product' => $product]);
+    }
+
+    public function update() {
+        $product = Product::find( request('id'));
+
+        $product->update($this->validateRequest());
+        $this->storeImage($product);
+        return redirect('/');
+    }
+
     private function validateRequest() {
-     return tap(request()->validate([
+     return request()->validate([
          'title' => 'min:3|required',
          'description' => 'min:3|required',
          "price" => 'integer|required',
-         "user_id" => 'integer|required'
-     ]), function () {
-         if (request()->hasFile('image')) {
-             request()->validate([
-                 'image' => 'nullable|file|image|max:5000'
-             ]);
-         }
-     });
+         "user_id" => 'integer|required',
+         'image' => 'file|image|max:5000|required'
+     ]);
     }
 
     private function storeImage($product) {
         if (request()->has('image')) {
+
             $product->update([
                 'image' => request()->image->store('uploads', 'public'),
             ]);
