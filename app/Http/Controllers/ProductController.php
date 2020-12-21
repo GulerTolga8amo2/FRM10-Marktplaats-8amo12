@@ -15,6 +15,7 @@ class ProductController extends Controller {
     public function create() {
         $product = Product::create($this->validateRequest());
 
+        $this->storeImage($product);
         return redirect('/');
     }
 
@@ -35,5 +36,13 @@ class ProductController extends Controller {
              ]);
          }
      });
+    }
+
+    private function storeImage($product) {
+        if (request()->has('image')) {
+            $product->update([
+                'image' => request()->image->store('uploads', 'public'),
+            ]);
+        }
     }
 }

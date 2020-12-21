@@ -17,10 +17,10 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home')->middleware('Auth');
 Route::view('product', "product");
 Route::view('add-product', "addProduct");
 
-Route::get('/home', 'ProductController@read');
+Route::get('/', 'ProductController@read');
 
 Route::post('/add-product/confirm', "ProductController@create");
