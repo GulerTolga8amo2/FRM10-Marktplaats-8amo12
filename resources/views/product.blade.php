@@ -5,9 +5,7 @@
         <div class="card mt-3">
             <div class="card-header">
                 <h1 class="font-weight-bold">{{$product->title}}</h1>
-                @if($product->image)
-                    <div class="col-12"><img src="{{asset('storage/' . $product->image) }}" class="img-thumbnail"></div>
-                @endif
+                <div class="col-12"><img src="{{asset('storage/' . $product->image) }}" class="img-thumbnail"></div>
             </div>
             <div class="card-body">
                 <div class="mb-3">€ {{$product->price}}</div>

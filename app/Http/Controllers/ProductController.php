@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class ProductController extends Controller {
 
@@ -57,6 +58,9 @@ class ProductController extends Controller {
             $product->update([
                 'image' => request()->image->store('uploads', 'public'),
             ]);
+
+            $image = Image::make(public_path('storage/' . $product->image))->fit(400,400, null, 'left');
+            $image->save();
         }
     }
 }

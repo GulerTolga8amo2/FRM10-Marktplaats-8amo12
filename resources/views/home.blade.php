@@ -4,7 +4,7 @@
 <section class="container-fluid">
     <div class="row justify-content-center mx-5">
     @foreach($products as $product)
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div class="card mt-3">
                 <div class="card-header">
                     <h1 class="font-weight-bold">{{$product->title}}</h1>
