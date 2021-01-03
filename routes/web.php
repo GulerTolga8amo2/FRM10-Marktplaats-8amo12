@@ -25,6 +25,8 @@ Route::get('/add-product', function (){
 
 Route::get('product/{id}/{userId}', "productController@show")->middleware("auth");
 Route::get('edit-product/{id}/{userId}', "productController@edit")->middleware("auth");
+Route::get('delete-product/{id}', "productController@delete")->middleware("auth");
+
 
 Route::post('/add-product/confirm', "ProductController@create");
 Route::post('/edit-product/confirm', "ProductController@update");

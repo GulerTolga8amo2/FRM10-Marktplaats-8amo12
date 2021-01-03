@@ -11,7 +11,7 @@
                 <div class="mb-3">€ {{$product->price}}</div>
                 <div>{{$product->description}}</div>
                 <a href="{{url('/edit-product', [$product->id, $product->user_id])}}"><button class="btn btn-primary mt-4">Edit</button></a>
-                <a href="{{url('/delete-product', [$product->id, $product->user_id])}}"><button class="btn btn-danger mt-4">Delete</button></a>
+                <a href="{{url('/delete-product', [$product->id])}}"><button class="btn btn-danger mt-4">Delete</button></a>
             </div>
         </div>
     </div>

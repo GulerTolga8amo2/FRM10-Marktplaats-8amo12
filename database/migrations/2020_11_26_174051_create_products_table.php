@@ -17,10 +17,10 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('title');
-            $table->string('description');
+            $table->mediumText('description');
             $table->string('image');
             $table->integer('price');
-            $table->integer('deleted')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

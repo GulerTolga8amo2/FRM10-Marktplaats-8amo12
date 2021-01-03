@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Product;
+use App\User;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,12 +22,22 @@ class ProductController extends Controller {
     }
 
     public function read() {
-        return  view('/home', ['products' => Product::all()->where('user_id', auth::id())->sortByDesc('updated_at')]);
+        $admin = User::select("adminLvl")->firstWhere("id", auth::id());
+        if ($admin->adminLvl == 2) {
+
+            $product = Product::all();
+        } else {
+            $product = Product::all()->where('user_id', auth::id())->sortByDesc('updated_at');
+        }
+        return  view('/home', ['products' => $product]);
     }
 
     public function show() {
         $product = Product::firstWhere('id', request('id'));
-        return view('/product', ['product' => $product]);
+        if (!empty($product))
+            return view('/product', ['product' => $product]);
+        else
+            return view('/');
     }
 
     public function edit() {
@@ -35,11 +46,17 @@ class ProductController extends Controller {
     }
 
     public function update() {
-        $product = Product::find( request('id'));
+        $product = Product::find(request('id'));
 
         $product->update($this->validateRequest());
         $this->storeImage($product);
         return redirect('/');
+    }
+
+    public function delete() {
+        $product = Product::where("id", request('id'))->delete();
+        return redirect('/');
+
     }
 
     private function validateRequest() {

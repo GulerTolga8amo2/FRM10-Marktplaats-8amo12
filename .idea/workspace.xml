@@ -7,7 +7,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -149,7 +149,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608577825532</updated>
-      <workItem from="1608577827157" duration="9440000" />
+      <workItem from="1608577827157" duration="9556000" />
+      <workItem from="1609693990638" duration="2766000" />
     </task>
     <servers />
   </component>
@@ -157,13 +158,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608586417217">
-      <screen x="0" y="0" width="1440" height="848" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609696515804">
+      <screen x="0" y="0" width="1440" height="847" />
     </state>
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1440.0.1680.1050/0.0.1440.847@0.0.1440.847" timestamp="1609696515804" />
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1440.0.1680.1050/0.0.1440.848@0.0.1440.848" timestamp="1608586417217" />
     <state x="522" y="380" key="NewPhpFileDialog" timestamp="1608581316899">
       <screen x="0" y="0" width="1440" height="848" />
     </state>
     <state x="522" y="380" key="NewPhpFileDialog/1440.0.1680.1050/0.0.1440.848@0.0.1440.848" timestamp="1608581316899" />
+    <state x="385" y="171" width="670" height="676" key="search.everywhere.popup" timestamp="1609696905812">
+      <screen x="0" y="0" width="1440" height="847" />
+    </state>
+    <state x="385" y="171" width="670" height="676" key="search.everywhere.popup/1440.0.1680.1050/0.0.1440.847@0.0.1440.847" timestamp="1609696905812" />
   </component>
 </project>
